@@ -1,0 +1,32 @@
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  html,
+  body {
+    scrollbar-width: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  .mobile-edge-safe-right {
+    right: 0 !important;
+  }
+
+  .mobile-edge-safe-left {
+    left: 0 !important;
+  }
+}
