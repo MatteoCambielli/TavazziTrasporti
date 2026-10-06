@@ -15,14 +15,8 @@ export const Fleet = () => `
         <div class="order-2 lg:order-1">
           <div class="space-y-6 text-gray-600 text-lg leading-relaxed mb-8">
             <p>
-              Non crediamo nella logica del "più e meglio". La nostra flotta è
-              <strong class="text-[#1B4D3E]"> volutamente contenuta</strong>,
-              perché preferiamo avere pochi mezzi perfettamente mantenuti
-              piùttosto che tanti veicoli trascurati.
-            </p>
-            <p>
-              Ogni camion della nostra flotta viene sottoposto a controlli
-              regolari e manutenzione preventiva. Non aspettiamo che qualcosa si
+              Ogni camion della nostra flotta viene sottoposto a <strong class="text-[#1B4D3E]">controlli
+              regolari e manutenzione preventiva</strong>. Non aspettiamo che qualcosa si
               rompa: interveniamo prima, perché la vostra merce non può permettersi ritardi.
             </p>
             <p>

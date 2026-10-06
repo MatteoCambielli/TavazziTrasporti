@@ -34,7 +34,7 @@ export const Footer = () => {
                 .map(
                   ({ href, label }) => `
                     <li>
-                      <a href="${href}" class="text-gray-400 hover:text-white transition-colors">
+                      <a href="${href.startsWith("#") ? "./" + href : href}" class="text-gray-400 hover:text-white transition-colors">
                         ${href === "#perche-noi" ? "Perché Sceglierci" : label}
                       </a>
                     </li>
@@ -79,7 +79,7 @@ export const Footer = () => {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div class="flex flex-col md:flex-row items-center justify-between gap-4">
             <p class="text-gray-500 text-sm text-center md:text-left">
-              © ${year} Tavazzi Trasporti - F.lli Tavazzi S.n.c. - Tutti i diritti riservati
+              © ${year} Tavazzi Trasporti - Tavazzi Trasporti S.n.c. - Tutti i diritti riservati
             </p>
             <button
               data-scroll-top

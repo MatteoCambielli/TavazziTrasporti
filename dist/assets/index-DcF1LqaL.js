@@ -1,18 +1,48 @@
-(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))n(o);new MutationObserver(o=>{for(const s of o)if(s.type==="childList")for(const p of s.addedNodes)p.tagName==="LINK"&&p.rel==="modulepreload"&&n(p)}).observe(document,{childList:!0,subtree:!0});function i(o){const s={};return o.integrity&&(s.integrity=o.integrity),o.referrerPolicy&&(s.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?s.credentials="include":o.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(o){if(o.ep)return;o.ep=!0;const s=i(o);fetch(o.href,s)}})();const m=[{href:"#chi-siamo",label:"Chi Siamo"},{href:"#servizi",label:"Servizi"},{href:"#flotta",label:"La Nostra Flotta"},{href:"#perche-noi",label:"Perché Noi"},{href:"#contatti",label:"Contatti"}],l=[{icon:"phone",label:"Telefono",value:"0377 944436",href:"tel:0377944436"},{icon:"mail",label:"Email",value:"raffaella@fllitavazzisnc.191.it",href:"mailto:raffaella@fllitavazzisnc.191.it"},{icon:"map",label:"Sede",value:"Piazza Mercato 37, Orio Litta (LO)",href:"https://maps.google.com/?q=Piazza+Mercato+37+Orio+Litta"}],b=[{icon:"users",title:"Tradizione Famigliare",text:"Tre generazioni unite dalla stessa passione per il trasporto"},{icon:"heart",title:"Dedizione Totale",text:"Ogni cliente è trattato come parte della famiglia"},{icon:"shield",title:"Affidabilità Garantita",text:"Oltre 60 anni di servizio senza compromessi"}],w=[{icon:"truck",title:"Trasporto Merci",text:"Trasporto su gomma affidabile e sicuro per merci di ogni tipo. La nostra esperienza garantisce consegne puntuali in tutta Italia."},{icon:"warehouse",title:"Magazzino e Logistica",text:"Offriamo soluzioni di stoccaggio, con magazzini sicuri e organizzati per ottimizzare i vostri flussi di lavoro."},{icon:"clock",title:"Puntualità Garantita",text:"Il tempo è denaro. Rispettiamo sempre le tempistiche concordate, perché la vostra pianificazione dipende dalla nostra affidabilità."},{icon:"package",title:"Cura del Carico",text:"Ogni merce viene trattata con la massima attenzione. Carico e scarico accurato per preservare l'integrità dei vostri prodotti."},{icon:"route",title:"Flessibilità Operativa",text:"Ci adattiamo alle vostre esigenze. Orari, percorsi e modalità di consegna personalizzate per ogni cliente."},{icon:"shield",title:"Sicurezza Totale",text:"Mezzi revisionati, autisti esperti e assicurazione completa. La vostra merce è sempre in buone mani."}],y=["Mezzi moderni e costantemente aggiornati","Manutenzione preventiva programmata","Revisioni sempre in regola","Dotazioni di sicurezza complete","Sistemi di tracciamento GPS","Copertura assicurativa totale"],z=[{icon:"award",stat:"60+",title:"Anni di Esperienza",text:"Sessant'anni di trasporti senza interruzioni, con la stessa passione del primo giorno."},{icon:"users",stat:"3",title:"Generazioni",text:"Una tradizione di famiglia che si tramanda con orgoglio da nonno a nipote."},{icon:"clock",stat:"100%",title:"Puntualità",text:"Il rispetto dei tempi non è un obiettivo, è una promessa che manteniamo sempre."},{icon:"phone",stat:"1",title:"Referente Diretto",text:"Niente call center. Parli sempre con chi conosce la tua merce e il tuo business."},{icon:"shield",stat:"0",title:"Compromessi",text:"La qualità del servizio non è mai stata negoziabile per la nostra famiglia."},{icon:"heart",stat:"∞",title:"Clienti Soddisfatti",text:"Molti dei nostri clienti sono con noi da decenni. È il nostro orgoglio più grande."}],B=(e,t="w-5 h-5")=>`
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))r(i);new MutationObserver(i=>{for(const s of i)if(s.type==="childList")for(const c of s.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&r(c)}).observe(document,{childList:!0,subtree:!0});function o(i){const s={};return i.integrity&&(s.integrity=i.integrity),i.referrerPolicy&&(s.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?s.credentials="include":i.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function r(i){if(i.ep)return;i.ep=!0;const s=o(i);fetch(i.href,s)}})();const w=(e,t="w-5 h-5")=>`
   <svg class="${t}" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     ${e}
   </svg>
-`,a=(e,t)=>{const i={phone:'<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.77.59 2.61a2 2 0 0 1-.45 2.11L8 9.69a16 16 0 0 0 6.31 6.31l1.25-1.25a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.61.59A2 2 0 0 1 22 16.92Z"/>',mail:'<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-10 6L2 7"/>',map:'<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',warehouse:'<path d="M22 8.35V21H2V8.35L12 3l10 5.35Z"/><path d="M6 21V11h12v10"/><path d="M9 21v-4h6v4"/><path d="M6 14h12"/><path d="M9 11V8.5h6V11"/>',users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',heart:'<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>',shield:'<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1Z"/>',truck:'<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>',clock:'<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',package:'<path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/>',route:'<circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/>',award:'<path d="m15.48 12.89 1.57 8.88L12 18.77l-5.05 3 1.57-8.88"/><circle cx="12" cy="8" r="6"/>',check:'<path d="M20 6 9 17l-5-5"/>',menu:'<path d="M4 12h16"/><path d="M4 6h16"/><path d="M4 18h16"/>',close:'<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',chevronDown:'<path d="m6 9 6 6 6-6"/>',arrowUp:'<path d="m18 15-6-6-6 6"/>',send:'<path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>'};return B(i[e]||i.check,t)},k=({href:e,label:t},i=!0)=>`
+`,a=(e,t)=>{const o={phone:'<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.77.59 2.61a2 2 0 0 1-.45 2.11L8 9.69a16 16 0 0 0 6.31 6.31l1.25-1.25a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.61.59A2 2 0 0 1 22 16.92Z"/>',mail:'<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-10 6L2 7"/>',map:'<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',warehouse:'<path d="M22 8.35V21H2V8.35L12 3l10 5.35Z"/><path d="M6 21V11h12v10"/><path d="M9 21v-4h6v4"/><path d="M6 14h12"/><path d="M9 11V8.5h6V11"/>',users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',heart:'<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>',shield:'<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1Z"/>',truck:'<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>',clock:'<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',package:'<path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/>',route:'<circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/>',award:'<path d="m15.48 12.89 1.57 8.88L12 18.77l-5.05 3 1.57-8.88"/><circle cx="12" cy="8" r="6"/>',check:'<path d="M20 6 9 17l-5-5"/>',menu:'<path d="M4 12h16"/><path d="M4 6h16"/><path d="M4 18h16"/>',close:'<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',chevronDown:'<path d="m6 9 6 6 6-6"/>',arrowUp:'<path d="m18 15-6-6-6 6"/>',send:'<path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>'};return w(o[e]||o.check,t)},z=[{number:"01",title:"Sede",address:"Piazza Mercato 37",icon:"map",text:"Il punto di riferimento per informazioni, preventivi e rapporti con la nostra azienda."},{number:"02",title:"Magazzino",address:"Viale dell’Artigianato 7",icon:"warehouse",text:"Il riferimento per la logistica. Contattaci prima di arrivare per concordare ritiri e consegne."}],y=e=>`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(e+", Orio Litta, LO, Italia")}`,$=encodeURIComponent("Piazza Mercato 37, Orio Litta, Italia"),k=encodeURIComponent("Viale dell'Artigianato 7, Orio Litta, Italia"),B=()=>`
+  <section class="location-hero">
+    <div class="location-container">
+      <a class="location-back" href="./">← Torna alla home</a>
+      <p class="location-kicker">ORIO LITTA · LODI</p>
+      <h1>Dove siamo<span>Due punti. Un unico riferimento.</span></h1>
+      <p class="location-intro">La nostra casa è a Orio Litta. Qui trovi la sede e il magazzino di Tavazzi Trasporti: scegli la tua destinazione e organizza il prossimo incontro con noi.</p>
+    </div>
+  </section>
+  <section class="location-content location-container" aria-label="Le nostre sedi">
+    <div class="location-map-panel">
+      <div class="location-map-heading"><div><p class="location-kicker">SUL TERRITORIO</p><h2>Ci trovi qui.</h2></div><span class="location-badge">2 sedi a Orio Litta</span></div>
+      <iframe class="location-map" title="Mappa di Orio Litta con sede in Piazza Mercato 37 e magazzino in Viale dell’Artigianato 7" src="https://maps.google.com/maps?saddr=${$}&daddr=${k}&output=embed&hl=it" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="location-map-caption"><span><i></i> Sede · Piazza Mercato 37</span><span><i></i> Magazzino · Viale dell’Artigianato 7</span></div>
+      <p class="location-map-note">La mappa mostra i due indirizzi e il collegamento tra le sedi. Per partire dalla tua posizione, scegli “Indicazioni stradali” qui sotto.</p>
+    </div>
+    <div class="location-cards">${z.map(e=>`
+      <article class="location-card">
+        <div class="location-card-top"><span class="location-icon">${a(e.icon,"w-6 h-6")}</span><span class="location-number">${e.number}</span></div>
+        <h2>${e.title}</h2><p class="location-address">${e.address}<br><span>26863 Orio Litta (LO)</span></p>
+        <p class="location-description">${e.text}</p>
+        <a class="location-direction" href="${y(e.address)}" target="_blank" rel="noopener noreferrer">Indicazioni stradali ${a("arrowUp","w-5 h-5")}</a>
+      </article>`).join("")}
+    </div>
+    <div class="location-visit">
+      <div><p class="location-kicker">PRIMA DI PARTIRE</p><h2>Organizziamo il tuo arrivo.</h2><p>Per ritiri e consegne, comunicaci il tipo di merce e l’orario previsto. Ti aiuteremo a concordare l’accesso al magazzino e le operazioni di carico o scarico.</p><a href="tel:0377944436" class="location-call">${a("phone","w-5 h-5")} 0377 944436</a></div>
+      <div class="location-hours"><h3>Orari di disponibilità</h3><p>Lunedì – Venerdì<strong>9:30 – 12:30 / 14:30 – 18:30</strong></p><p>Sabato e domenica<strong>Chiuso</strong></p><small>Per l’accesso al magazzino, concorda l’orario telefonicamente.</small></div>
+    </div>
+    <div class="location-contact"><span>Preferisci scriverci?</span><a href="mailto:raffaella@fllitavazzisnc.191.it">raffaella@fllitavazzisnc.191.it ↗</a><a href="./#contatti">Richiedi un preventivo →</a></div>
+  </section>
+`,g=[{href:"#chi-siamo",label:"Chi Siamo"},{href:"#servizi",label:"Servizi"},{href:"#flotta",label:"La Nostra Flotta"},{href:"#perche-noi",label:"Perché Noi"},{href:"?pagina=dove-siamo",label:"Dove siamo"},{href:"#contatti",label:"Contatti"}],l=[{icon:"phone",label:"Telefono",value:"0377 944436",href:"tel:0377944436"},{icon:"mail",label:"Email",value:"raffaella@fllitavazzisnc.191.it",href:"mailto:raffaella@fllitavazzisnc.191.it"},{icon:"map",label:"Sede",value:"Piazza Mercato 37, Orio Litta (LO)",href:"https://maps.google.com/?q=Piazza+Mercato+37+Orio+Litta"}],L=[{icon:"users",title:"Tradizione Famigliare",text:"Tre generazioni unite dalla stessa passione per il trasporto"},{icon:"heart",title:"Dedizione Totale",text:"Ogni cliente è trattato come parte della famiglia"},{icon:"shield",title:"Affidabilità Garantita",text:"Oltre 60 anni di servizio senza compromessi"}],D=[{icon:"truck",title:"Trasporto Merci",text:"Trasporto su gomma affidabile e sicuro per merci di ogni tipo. La nostra esperienza garantisce consegne puntuali con pianali in legno, bilici 13,60 m, centinati aperti e ribassati, con capannina."},{icon:"warehouse",title:"Magazzino e Logistica",text:"Offriamo soluzioni di stoccaggio, con magazzini sicuri e organizzati per ottimizzare i vostri flussi di lavoro. Un'area di 14000 mq e 1000 m di capannone coperto."},{icon:"clock",title:"Puntualità Garantita",text:"Il tempo è denaro. Rispettiamo sempre le tempistiche concordate, perché la vostra pianificazione dipende dalla nostra affidabilità."},{icon:"package",title:"Cura del Carico",text:"Grazie alla pluriennale esperienza del nostro personale, ogni merce viene trattata con la massima attenzione. Carico e scarico accurato per preservare l'integrità dei vostri prodotti."},{icon:"route",title:"Flessibilità Operativa",text:"Ci adattiamo alle vostre esigenze. Orari, percorsi e modalità di consegna personalizzate per ogni cliente."},{icon:"shield",title:"Sicurezza Totale",text:"Mezzi revisionati, autisti esperti e assicurazione completa. La vostra merce è sempre in buone mani!"}],E=["Mezzi moderni e costantemente aggiornati","Manutenzione preventiva programmata","Revisioni sempre in regola","Dotazioni di sicurezza complete","Copertura assicurativa"],C=[{icon:"award",stat:"60+",title:"Anni di Esperienza",text:"Sessant'anni di trasporti senza interruzioni, con la stessa passione del primo giorno."},{icon:"users",stat:"3",title:"Generazioni",text:"Una tradizione di famiglia che si tramanda con orgoglio da nonno a nipote."},{icon:"clock",stat:"100%",title:"Puntualità",text:"Il rispetto dei tempi non è un obiettivo, è una promessa che manteniamo sempre."},{icon:"phone",stat:"1",title:"Referente Diretto",text:"Niente call center. Parli sempre con chi conosce la tua merce e il tuo business."},{icon:"shield",stat:"0",title:"Compromessi",text:"La qualità del servizio non è mai stata negoziabile per la nostra famiglia."},{icon:"heart",stat:"∞",title:"Clienti Soddisfatti",text:"Molti dei nostri clienti sono con noi da decenni. È il nostro orgoglio più grande."}],T=({href:e,label:t},o=!0)=>`
   <a
-    href="${e}"
-    ${i?"data-header-text":""}
+    href="${e.startsWith("#")?"./"+e:e}"
+    ${o?"data-header-text":""}
     class="font-['Manrope'] text-sm font-semibold uppercase tracking-wider transition-colors hover:text-[#10B981] text-white"
   >
     ${t}
   </a>
-`,$=()=>`
+`,M=()=>`
   <header
     data-header
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-3"
@@ -20,7 +50,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between">
         <a
-          href="#"
+          href="./"
           data-header-text
           class="font-['Barlow_Condensed'] text-2xl md:text-3xl font-bold uppercase tracking-tight transition-colors text-white"
         >
@@ -28,7 +58,7 @@
         </a>
 
         <nav class="hidden lg:flex items-center gap-8">
-          ${m.map(e=>k(e)).join("")}
+          ${g.map(e=>T(e)).join("")}
         </nav>
 
         <div class="hidden lg:flex items-center gap-4">
@@ -41,7 +71,7 @@
             0377 944436
           </a>
           <a
-            href="#contatti"
+            href="./#contatti"
             class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-colors shadow h-9 bg-[#1B4D3E] text-white hover:bg-[#143a2f] rounded-none px-6 py-2 text-sm font-bold uppercase tracking-wider"
           >
             Contattaci
@@ -65,9 +95,9 @@
       class="hidden lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg"
     >
       <nav class="flex flex-col py-4">
-        ${m.map(({href:e,label:t})=>`
+        ${g.map(({href:e,label:t})=>`
               <a
-                href="${e}"
+                href="${e.startsWith("#")?"./"+e:e}"
                 class="px-6 py-3 text-gray-700 font-semibold uppercase tracking-wider hover:bg-gray-50 hover:text-[#1B4D3E] transition-colors"
               >
                 ${t}
@@ -82,7 +112,7 @@
           0377 944436
         </a>
         <a
-          href="#contatti"
+          href="./#contatti"
           class="block text-center bg-[#1B4D3E] text-white hover:bg-[#143a2f] px-6 py-3 uppercase tracking-wider font-bold transition-colors"
         >
           Contattaci
@@ -91,7 +121,7 @@
       </nav>
     </div>
   </header>
-`,E=()=>`
+`,_=()=>`
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <div
       class="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -142,7 +172,7 @@
       ${a("chevronDown","w-8 h-8")}
     </a>
   </section>
-`,L=()=>`
+`,I=()=>`
   <section id="chi-siamo" class="py-20 md:py-32 bg-white" data-testid="chi-siamo-section">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -179,23 +209,24 @@
               con clienti che spesso sono diventati amici.
             </p>
             <p>
-              La nostra è una
-              <strong class="text-[#1B4D3E]"> storia di continuità</strong>:
-              dal fondatore ai figli, ogni generazione ha portato avanti i
-              valori di serietà, puntualità e rispetto della parola data. Non
-              abbiamo mai cercato di diventare i più grandi, ma i più affidabili.
+              La nostra è una <strong class="text-[#1B4D3E]">storia di continuità</strong>: 
+              dal fondatore ai figli, ogni generazione ha portato avanti valori di serietà, 
+              puntualità e rispetto. Non abbiamo mai cercato di diventare i più grandi, 
+              ma i più affidabili.
+              Dai primi anni ’60, l’impresa è cresciuta in modo costante e graduale, passando 
+              dal semplice trasporto a una gestione più completa e dinamica. Nel tempo abbiamo 
+              continuato a rinnovare automezzi e servizi, adattandoci alle nuove esigenze e offrendo 
+              soluzioni sempre più adeguate alle necessità dei clienti.
             </p>
             <p>
-              Oggi, con una flotta contenuta ma perfettamente mantenuta,
-              continuiamo a offrire un servizio personalizzato dove il
+              Oggi, continuiamo a offrire un servizio personalizzato dove il
               <strong class="text-[#1B4D3E]"> rapporto diretto con il cliente</strong>
-              rimane il nostro punto di forza. Quando ci affidi la tua merce,
-              parli direttamente con chi la trasporterà.
+              rimane il nostro punto di forza.
             </p>
           </div>
 
           <div class="grid sm:grid-cols-3 gap-4 mt-10">
-            ${b.map(e=>`
+            ${L.map(e=>`
                   <div class="bg-[#F3F4F6] p-6">
                     <div class="text-[#10B981] mb-4">${a(e.icon,"w-8 h-8")}</div>
                     <h3 class="font-['Barlow_Condensed'] text-xl font-bold text-[#1B4D3E] uppercase mb-2">
@@ -209,25 +240,25 @@
       </div>
     </div>
   </section>
-`,d=({kicker:e,title:t,text:i,light:n=!1})=>`
+`,p=({kicker:e,title:t,text:o,light:r=!1})=>`
   <div class="text-center max-w-3xl mx-auto mb-16">
     <span class="text-[#10B981] text-sm font-semibold uppercase tracking-widest">
       ${e}
     </span>
     <h2
-      class="font-['Barlow_Condensed'] text-4xl md:text-5xl font-bold uppercase tracking-tight mt-3 mb-6 ${n?"text-white":"text-[#1B4D3E]"}"
+      class="font-['Barlow_Condensed'] text-4xl md:text-5xl font-bold uppercase tracking-tight mt-3 mb-6 ${r?"text-white":"text-[#1B4D3E]"}"
     >
       ${t}
     </h2>
-    ${i?`<p class="${n?"text-gray-200":"text-gray-600"} text-lg leading-relaxed">${i}</p>`:""}
+    ${o?`<p class="${r?"text-gray-200":"text-gray-600"} text-lg leading-relaxed">${o}</p>`:""}
   </div>
-`,D=()=>`
+`,O=()=>`
   <section id="servizi" class="py-20 md:py-32 bg-[#F3F4F6]" data-testid="servizi-section">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      ${d({kicker:"Cosa Facciamo",title:"I Nostri Servizi",text:"Offriamo un servizio di trasporto merci completo, costruito su decenni di esperienza e sulla cura di ogni dettaglio. La qualità non è un optional, è il nostro standard."})}
+      ${p({kicker:"Cosa Facciamo",title:"I Nostri Servizi",text:"Offriamo un servizio di trasporto merci completo, costruito su decenni di esperienza e sulla cura di ogni dettaglio. La qualità non è un optional, è il nostro standard."})}
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        ${w.map((e,t)=>`
+        ${D.map((e,t)=>`
               <article
                 class="bg-white p-8 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_40px_-8px_rgba(0,0,0,0.18)] transition-all hover:-translate-y-1"
                 data-testid="service-card-${t}"
@@ -254,10 +285,10 @@
       </div>
     </div>
   </section>
-`,C=()=>`
+`,S=()=>`
   <section id="flotta" class="py-20 md:py-32 bg-white" data-testid="flotta-section">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      ${d({kicker:"I Nostri Mezzi",title:"La Nostra Flotta",text:""})}
+      ${p({kicker:"I Nostri Mezzi",title:"La Nostra Flotta",text:""})}
 
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div class="order-2 lg:order-1">
@@ -281,7 +312,7 @@
           </div>
 
           <div class="grid sm:grid-cols-2 gap-4">
-            ${y.map(e=>`
+            ${E.map(e=>`
                   <div class="flex items-start gap-3">
                     <div class="w-6 h-6 bg-[#10B981] text-white rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       ${a("check","w-4 h-4")}
@@ -310,13 +341,13 @@
       </div>
     </div>
   </section>
-`,M=()=>`
+`,j=()=>`
   <section id="perche-noi" class="py-20 md:py-32 bg-[#1B4D3E] text-white" data-testid="perche-noi-section">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      ${d({kicker:"I Nostri Punti di Forza",title:"Perché Sceglierci",text:"In un settore dove tutti promettono affidabilità, noi la dimostriamo con i fatti. Da oltre 60 anni, giorno dopo giorno.",light:!0})}
+      ${p({kicker:"I Nostri Punti di Forza",title:"Perché Sceglierci",text:"Dicono di noi: «I Tavazzi si occupano di trasporti e logistica in modo esemplare, con la tenacia e la dedizione che da sempre li contraddistinguono. Lo fanno così bene che, una volta diventato loro cliente, rischi di considerarli parte della tua stessa azienda.",light:!0})}
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        ${z.map((e,t)=>`
+        ${C.map((e,t)=>`
               <article
                 class="bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-all"
                 data-testid="strength-card-${t}"
@@ -343,12 +374,12 @@
           Noi curiamo ogni dettaglio come se fosse l'unico."
         </blockquote>
         <div class="mt-6 text-[#10B981] uppercase tracking-wider font-semibold">
-          - Famiglia Tavazzi
+          - Tavazzi Trasporti
         </div>
       </div>
     </div>
   </section>
-`,_=e=>{document.getElementById("root").innerHTML=e},c="flex h-10 w-full border border-input px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",T=(e,t)=>`
+`,P=e=>{document.getElementById("root").innerHTML=e},d="flex h-10 w-full border border-input px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",A=(e,t)=>`
   <a
     href="${e.href}"
     ${e.href.startsWith("http")?'target="_blank" rel="noopener noreferrer"':""}
@@ -365,10 +396,10 @@
       </div>
     </div>
   </a>
-`,S=()=>`
+`,q=()=>`
   <section id="contatti" class="py-20 md:py-32 bg-[#F3F4F6]" data-testid="contatti-section">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      ${d({kicker:"Parliamone",title:"Contattaci",text:"Hai bisogno di un preventivo? Vuoi collaborare con noi? Siamo qui per ascoltarti. Compila il modulo e ti risponderemo nel minor tempo possibile."})}
+      ${p({kicker:"Parliamone",title:"Contattaci",text:"Hai bisogno di un preventivo? Vuoi collaborare con noi? Siamo qui per ascoltarti. Compila il modulo e ti risponderemo nel minor tempo possibile."})}
 
       <div class="grid lg:grid-cols-5 gap-12">
         <div class="lg:col-span-2 space-y-8">
@@ -377,7 +408,7 @@
               Informazioni di Contatto
             </h3>
             <div class="space-y-6">
-              ${l.map(T).join("")}
+              ${l.map(A).join("")}
             </div>
           </div>
 
@@ -386,7 +417,7 @@
               Orari di Disponibilità
             </h3>
             <div class="space-y-2 text-gray-200">
-              <p>Lunedì - Venerdì: 9:30 - 18:30</p>
+              <p>Lunedì - Venerdì: 9:30 - 12:30 | 14.30 - 18:30</p>
               <p>Sabato e domenica: chiuso</p>
               <p class="text-[#10B981] font-semibold mt-4">
                 Reperibilità telefonica anche fuori orario per urgenze
@@ -398,6 +429,7 @@
         <div class="lg:col-span-3">
           <div class="bg-white p-8 md:p-10 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
             <form data-contact-form class="space-y-6" data-testid="contact-form">
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="contact-trap" aria-hidden="true" />
               <div class="grid md:grid-cols-2 gap-6">
                 <label class="space-y-2 block">
                   <span class="text-gray-700 font-semibold">Nome e Cognome *</span>
@@ -406,7 +438,7 @@
                     type="text"
                     required
                     placeholder="Il tuo nome"
-                    class="${c} rounded-none border-gray-300 focus:border-[#1B4D3E] focus:ring-[#1B4D3E] bg-gray-50"
+                    class="${d} rounded-none border-gray-300 focus:border-[#1B4D3E] focus:ring-[#1B4D3E] bg-gray-50"
                     data-testid="input-nome"
                   />
                 </label>
@@ -417,7 +449,7 @@
                     type="email"
                     required
                     placeholder="La tua email"
-                    class="${c} rounded-none border-gray-300 focus:border-[#1B4D3E] focus:ring-[#1B4D3E] bg-gray-50"
+                    class="${d} rounded-none border-gray-300 focus:border-[#1B4D3E] focus:ring-[#1B4D3E] bg-gray-50"
                     data-testid="input-email"
                   />
                 </label>
@@ -430,7 +462,7 @@
                     name="telefono"
                     type="tel"
                     placeholder="Il tuo numero"
-                    class="${c} rounded-none border-gray-300 focus:border-[#1B4D3E] focus:ring-[#1B4D3E] bg-gray-50"
+                    class="${d} rounded-none border-gray-300 focus:border-[#1B4D3E] focus:ring-[#1B4D3E] bg-gray-50"
                     data-testid="input-telefono"
                   />
                 </label>
@@ -439,7 +471,7 @@
                   <select
                     name="tipo_richiesta"
                     required
-                    class="${c} rounded-none border-gray-300 focus:border-[#1B4D3E] focus:ring-[#1B4D3E] bg-gray-50 text-gray-900"
+                    class="${d} rounded-none border-gray-300 focus:border-[#1B4D3E] focus:ring-[#1B4D3E] bg-gray-50 text-gray-900"
                     data-testid="select-tipo-richiesta"
                   >
                     <option value="">Seleziona un'opzione</option>
@@ -457,7 +489,7 @@
                   required
                   rows="5"
                   placeholder="Descrivi la tua richiesta..."
-                  class="${c} min-h-[60px] rounded-none border-gray-300 focus:border-[#1B4D3E] focus:ring-[#1B4D3E] bg-gray-50 resize-none"
+                  class="${d} min-h-[60px] rounded-none border-gray-300 focus:border-[#1B4D3E] focus:ring-[#1B4D3E] bg-gray-50 resize-none"
                   data-testid="textarea-messaggio"
                 ></textarea>
               </label>
@@ -471,6 +503,7 @@
                 <span>Invia Messaggio</span>
               </button>
 
+              <p data-form-status role="status" aria-live="polite" class="text-sm text-gray-700"></p>
               <p class="text-sm text-gray-500 text-center">
                 * Campi obbligatori. I tuoi dati saranno trattati nel rispetto della privacy.
               </p>
@@ -480,7 +513,7 @@
       </div>
     </div>
   </section>
-`,O=()=>{const e=new Date().getFullYear();return`
+`,R=()=>{const e=new Date().getFullYear();return`
     <footer class="bg-[#111827] text-white" data-testid="footer">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -506,10 +539,10 @@
               Link Rapidi
             </h4>
             <ul class="space-y-3">
-              ${m.map(({href:t,label:i})=>`
+              ${g.map(({href:t,label:o})=>`
                     <li>
-                      <a href="${t}" class="text-gray-400 hover:text-white transition-colors">
-                        ${t==="#perche-noi"?"Perché Sceglierci":i}
+                      <a href="${t.startsWith("#")?"./"+t:t}" class="text-gray-400 hover:text-white transition-colors">
+                        ${t==="#perche-noi"?"Perché Sceglierci":o}
                       </a>
                     </li>
                   `).join("")}
@@ -551,7 +584,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div class="flex flex-col md:flex-row items-center justify-between gap-4">
             <p class="text-gray-500 text-sm text-center md:text-left">
-              © ${e} Tavazzi Trasporti - F.lli Tavazzi S.n.c. - Tutti i diritti riservati
+              © ${e} Tavazzi Trasporti - Tavazzi Trasporti S.n.c. - Tutti i diritti riservati
             </p>
             <button
               data-scroll-top
@@ -567,22 +600,23 @@
         </div>
       </div>
     </footer>
-  `},j=()=>`
+  `},x=new URLSearchParams(window.location.search).get("pagina")==="dove-siamo",F=()=>`
   <div class="min-h-screen" data-testid="homepage">
-    ${$()}
+    ${M()}
     <main>
-      ${E()}
-      ${L()}
-      ${D()}
-      ${C()}
-      ${M()}
+      ${x?B():`
+      ${_()}
+      ${I()}
+      ${O()}
       ${S()}
+      ${j()}
+      ${q()}`}
     </main>
-    ${O()}
+    ${R()}
     <div
       data-toast
       class="hidden fixed top-4 right-4 z-[100] bg-[#111827] text-white px-6 py-4 shadow-xl max-w-sm"
       role="status"
     ></div>
   </div>
-`;_(j());const g=document.querySelector("[data-header]"),x=document.querySelector("[data-menu-toggle]"),h=document.querySelector("[data-mobile-menu]"),u=document.querySelector("[data-menu-icon]"),r=document.querySelector("[data-toast]"),F=document.querySelectorAll("[data-header-text]"),f=()=>{const e=window.scrollY>50;g?.classList.toggle("bg-white",e),g?.classList.toggle("backdrop-blur-md",e),g?.classList.toggle("shadow-lg",e),F.forEach(t=>{t.classList.toggle("text-white",!e),t.classList.toggle("text-[#1B4D3E]",e)})},v=e=>{h?.classList.toggle("hidden",!e),x?.setAttribute("aria-expanded",String(e)),u&&(u.innerHTML=a(e?"close":"menu","w-6 h-6"))};window.addEventListener("scroll",f,{passive:!0});f();x?.addEventListener("click",()=>{const e=x.getAttribute("aria-expanded")==="true";v(!e)});h?.addEventListener("click",e=>{e.target.closest("a")&&v(!1)});document.querySelector("[data-scroll-top]")?.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"})});document.querySelector("[data-contact-form]")?.addEventListener("submit",async e=>{e.preventDefault();const t=e.currentTarget,i=t.querySelector("button[type='submit']");if(!t.checkValidity()){t.reportValidity();return}const n=Object.fromEntries(new FormData(t).entries());i.disabled=!0,i.textContent="Invio in corso...";try{await fetch("https://trucking-legacy.preview.emergentagent.com/api/contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(n)}),t.reset(),r&&(r.textContent="Messaggio inviato con successo! Ti risponderemo al più presto.",r.classList.remove("hidden"),window.setTimeout(()=>r.classList.add("hidden"),5e3))}catch{r&&(r.textContent="Errore nell'invio del messaggio. Riprova più tardi.",r.classList.remove("hidden"),window.setTimeout(()=>r.classList.add("hidden"),5e3))}finally{i.disabled=!1,i.innerHTML=`${a("send","w-5 h-5")}<span>Invia Messaggio</span>`}});
+`;P(F());x&&(document.title="Dove siamo · Tavazzi Trasporti");const m=document.querySelector("[data-header]"),u=document.querySelector("[data-menu-toggle]"),v=document.querySelector("[data-mobile-menu]"),h=document.querySelector("[data-menu-icon]"),n=document.querySelector("[data-toast]"),N=document.querySelectorAll("[data-header-text]"),f=()=>{const e=window.scrollY>50;m?.classList.toggle("bg-white",e),m?.classList.toggle("backdrop-blur-md",e),m?.classList.toggle("shadow-lg",e),N.forEach(t=>{t.classList.toggle("text-white",!e),t.classList.toggle("text-[#1B4D3E]",e)})},b=e=>{v?.classList.toggle("hidden",!e),u?.setAttribute("aria-expanded",String(e)),h&&(h.innerHTML=a(e?"close":"menu","w-6 h-6"))};window.addEventListener("scroll",f,{passive:!0});f();u?.addEventListener("click",()=>{const e=u.getAttribute("aria-expanded")==="true";b(!e)});v?.addEventListener("click",e=>{e.target.closest("a")&&b(!1)});document.querySelector("[data-scroll-top]")?.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"})});document.querySelector("[data-contact-form]")?.addEventListener("submit",async e=>{e.preventDefault();const t=e.currentTarget,o=t.querySelector("button[type='submit']");if(!t.checkValidity()){t.reportValidity();return}const r=Object.fromEntries(new FormData(t).entries());if(r._honey)return;r._subject=`Tavazzi Trasporti — ${r.tipo_richiesta}`,r._replyto=r.email,r._template="table";const i=t.querySelector("[data-form-status]");i.textContent="Invio in corso…",o.disabled=!0,o.textContent="Invio in corso...";try{const s=await fetch("https://formsubmit.co/ajax/raffaella@fllitavazzisnc.191.it",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},signal:AbortSignal.timeout(2e4),body:JSON.stringify(r)}),c=await s.json();if(!s.ok||![!0,"true"].includes(c.success))throw new Error("Invio non accettato");t.reset(),i.textContent="Richiesta accettata. Grazie per averci contattato.",n&&(n.textContent="Richiesta accettata. Grazie per averci contattato.",n.classList.remove("hidden"),window.setTimeout(()=>n.classList.add("hidden"),5e3))}catch{i.textContent="Invio non riuscito. I dati sono ancora nel modulo: riprova oppure scrivi a raffaella@fllitavazzisnc.191.it.",n&&(n.textContent="Errore nell'invio del messaggio. Riprova più tardi.",n.classList.remove("hidden"),window.setTimeout(()=>n.classList.add("hidden"),5e3))}finally{o.disabled=!1,o.innerHTML=`${a("send","w-5 h-5")}<span>Invia Messaggio</span>`}});

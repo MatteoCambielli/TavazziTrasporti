@@ -3,7 +3,7 @@ import { icon } from "../icons.js";
 
 const navLink = ({ href, label }, trackHeaderColor = true) => `
   <a
-    href="${href}"
+    href="${href.startsWith("#") ? "./" + href : href}"
     ${trackHeaderColor ? "data-header-text" : ""}
     class="font-['Manrope'] text-sm font-semibold uppercase tracking-wider transition-colors hover:text-[#10B981] text-white"
   >
@@ -19,7 +19,7 @@ export const Header = () => `
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between">
         <a
-          href="#"
+          href="./"
           data-header-text
           class="font-['Barlow_Condensed'] text-2xl md:text-3xl font-bold uppercase tracking-tight transition-colors text-white"
         >
@@ -40,7 +40,7 @@ export const Header = () => `
             0377 944436
           </a>
           <a
-            href="#contatti"
+            href="./#contatti"
             class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-colors shadow h-9 bg-[#1B4D3E] text-white hover:bg-[#143a2f] rounded-none px-6 py-2 text-sm font-bold uppercase tracking-wider"
           >
             Contattaci
@@ -68,7 +68,7 @@ export const Header = () => `
           .map(
             ({ href, label }) => `
               <a
-                href="${href}"
+                href="${href.startsWith("#") ? "./" + href : href}"
                 class="px-6 py-3 text-gray-700 font-semibold uppercase tracking-wider hover:bg-gray-50 hover:text-[#1B4D3E] transition-colors"
               >
                 ${label}
@@ -85,7 +85,7 @@ export const Header = () => `
           0377 944436
         </a>
         <a
-          href="#contatti"
+          href="./#contatti"
           class="block text-center bg-[#1B4D3E] text-white hover:bg-[#143a2f] px-6 py-3 uppercase tracking-wider font-bold transition-colors"
         >
           Contattaci

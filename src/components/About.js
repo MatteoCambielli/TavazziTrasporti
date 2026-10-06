@@ -38,18 +38,19 @@ export const About = () => `
               con clienti che spesso sono diventati amici.
             </p>
             <p>
-              La nostra è una
-              <strong class="text-[#1B4D3E]"> storia di continuità</strong>:
-              dal fondatore ai figli, ogni generazione ha portato avanti i
-              valori di serietà, puntualità e rispetto della parola data. Non
-              abbiamo mai cercato di diventare i più grandi, ma i più affidabili.
+              La nostra è una <strong class="text-[#1B4D3E]">storia di continuità</strong>: 
+              dal fondatore ai figli, ogni generazione ha portato avanti valori di serietà, 
+              puntualità e rispetto. Non abbiamo mai cercato di diventare i più grandi, 
+              ma i più affidabili.
+              Dai primi anni ’60, l’impresa è cresciuta in modo costante e graduale, passando 
+              dal semplice trasporto a una gestione più completa e dinamica. Nel tempo abbiamo 
+              continuato a rinnovare automezzi e servizi, adattandoci alle nuove esigenze e offrendo 
+              soluzioni sempre più adeguate alle necessità dei clienti.
             </p>
             <p>
-              Oggi, con una flotta contenuta ma perfettamente mantenuta,
-              continuiamo a offrire un servizio personalizzato dove il
+              Oggi, continuiamo a offrire un servizio personalizzato dove il
               <strong class="text-[#1B4D3E]"> rapporto diretto con il cliente</strong>
-              rimane il nostro punto di forza. Quando ci affidi la tua merce,
-              parli direttamente con chi la trasporterà.
+              rimane il nostro punto di forza.
             </p>
           </div>
 

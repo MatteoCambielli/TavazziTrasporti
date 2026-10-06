@@ -3,6 +3,7 @@ export const navLinks = [
   { href: "#servizi", label: "Servizi" },
   { href: "#flotta", label: "La Nostra Flotta" },
   { href: "#perche-noi", label: "Perché Noi" },
+  { href: "?pagina=dove-siamo", label: "Dove siamo" },
   { href: "#contatti", label: "Contatti" },
 ];
 
@@ -49,12 +50,12 @@ export const services = [
   {
     icon: "truck",
     title: "Trasporto Merci",
-    text: "Trasporto su gomma affidabile e sicuro per merci di ogni tipo. La nostra esperienza garantisce consegne puntuali in tutta Italia.",
+    text: "Trasporto su gomma affidabile e sicuro per merci di ogni tipo. La nostra esperienza garantisce consegne puntuali con pianali in legno, bilici 13,60 m, centinati aperti e ribassati, con capannina.",
   },
   {
     icon: "warehouse",
     title: "Magazzino e Logistica",
-    text: "Offriamo soluzioni di stoccaggio, con magazzini sicuri e organizzati per ottimizzare i vostri flussi di lavoro.",
+    text: "Offriamo soluzioni di stoccaggio, con magazzini sicuri e organizzati per ottimizzare i vostri flussi di lavoro. Un'area di 14000 mq e 1000 m di capannone coperto.",
   },
   {
     icon: "clock",
@@ -64,7 +65,7 @@ export const services = [
   {
     icon: "package",
     title: "Cura del Carico",
-    text: "Ogni merce viene trattata con la massima attenzione. Carico e scarico accurato per preservare l'integrità dei vostri prodotti.",
+    text: "Grazie alla pluriennale esperienza del nostro personale, ogni merce viene trattata con la massima attenzione. Carico e scarico accurato per preservare l'integrità dei vostri prodotti.",
   },
   {
     icon: "route",
@@ -74,7 +75,7 @@ export const services = [
   {
     icon: "shield",
     title: "Sicurezza Totale",
-    text: "Mezzi revisionati, autisti esperti e assicurazione completa. La vostra merce è sempre in buone mani.",
+    text: "Mezzi revisionati, autisti esperti e assicurazione completa. La vostra merce è sempre in buone mani!",
   },
 ];
 
@@ -83,8 +84,8 @@ export const fleetFeatures = [
   "Manutenzione preventiva programmata",
   "Revisioni sempre in regola",
   "Dotazioni di sicurezza complete",
-  "Sistemi di tracciamento GPS",
-  "Copertura assicurativa totale",
+  //"Sistemi di tracciamento GPS",
+  "Copertura assicurativa",
 ];
 
 export const strengths = [

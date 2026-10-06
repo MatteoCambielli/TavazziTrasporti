@@ -47,7 +47,7 @@ export const Contact = () => `
               Orari di Disponibilità
             </h3>
             <div class="space-y-2 text-gray-200">
-              <p>Lunedì - Venerdì: 9:30 - 18:30</p>
+              <p>Lunedì - Venerdì: 9:30 - 12:30 | 14.30 - 18:30</p>
               <p>Sabato e domenica: chiuso</p>
               <p class="text-[#10B981] font-semibold mt-4">
                 Reperibilità telefonica anche fuori orario per urgenze
@@ -59,6 +59,7 @@ export const Contact = () => `
         <div class="lg:col-span-3">
           <div class="bg-white p-8 md:p-10 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
             <form data-contact-form class="space-y-6" data-testid="contact-form">
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="contact-trap" aria-hidden="true" />
               <div class="grid md:grid-cols-2 gap-6">
                 <label class="space-y-2 block">
                   <span class="text-gray-700 font-semibold">Nome e Cognome *</span>
@@ -132,6 +133,7 @@ export const Contact = () => `
                 <span>Invia Messaggio</span>
               </button>
 
+              <p data-form-status role="status" aria-live="polite" class="text-sm text-gray-700"></p>
               <p class="text-sm text-gray-500 text-center">
                 * Campi obbligatori. I tuoi dati saranno trattati nel rispetto della privacy.
               </p>

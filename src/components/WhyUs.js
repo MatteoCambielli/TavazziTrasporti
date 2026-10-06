@@ -8,7 +8,7 @@ export const WhyUs = () => `
       ${SectionHeading({
         kicker: "I Nostri Punti di Forza",
         title: "Perché Sceglierci",
-        text: "In un settore dove tutti promettono affidabilità, noi la dimostriamo con i fatti. Da oltre 60 anni, giorno dopo giorno.",
+        text: "Dicono di noi: «I Tavazzi si occupano di trasporti e logistica in modo esemplare, con la tenacia e la dedizione che da sempre li contraddistinguono. Lo fanno così bene che, una volta diventato loro cliente, rischi di considerarli parte della tua stessa azienda.",
         light: true,
       })}
 
@@ -44,7 +44,7 @@ export const WhyUs = () => `
           Noi curiamo ogni dettaglio come se fosse l'unico."
         </blockquote>
         <div class="mt-6 text-[#10B981] uppercase tracking-wider font-semibold">
-          - Famiglia Tavazzi
+          - Tavazzi Trasporti
         </div>
       </div>
     </div>

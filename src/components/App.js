@@ -1,3 +1,4 @@
+import { Locations } from "./Locations.js";
 import { Header } from "./Header.js";
 import { Hero } from "./Hero.js";
 import { About } from "./About.js";
@@ -7,16 +8,19 @@ import { WhyUs } from "./WhyUs.js";
 import { Contact } from "./Contact.js";
 import { Footer } from "./Footer.js";
 
+export const isLocationsPage = new URLSearchParams(window.location.search).get("pagina") === "dove-siamo";
+
 export const App = () => `
   <div class="min-h-screen" data-testid="homepage">
     ${Header()}
     <main>
+      ${isLocationsPage ? Locations() : `
       ${Hero()}
       ${About()}
       ${Services()}
       ${Fleet()}
       ${WhyUs()}
-      ${Contact()}
+      ${Contact()}`}
     </main>
     ${Footer()}
     <div

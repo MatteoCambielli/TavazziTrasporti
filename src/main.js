@@ -1,9 +1,10 @@
-import { App } from "./components/App.js";
+import { App, isLocationsPage } from "./components/App.js";
 import { icon } from "./icons.js";
 import { mount } from "./render.js";
 import "./styles.css";
 
 mount(App());
+if (isLocationsPage) document.title = "Dove siamo · Tavazzi Trasporti";
 
 const header = document.querySelector("[data-header]");
 const menuButton = document.querySelector("[data-menu-toggle]");
@@ -63,26 +64,37 @@ document
     }
 
     const payload = Object.fromEntries(new FormData(form).entries());
+    if (payload._honey) return;
+    payload._subject = `Tavazzi Trasporti — ${payload.tipo_richiesta}`;
+    payload._replyto = payload.email;
+    payload._template = "table";
+    const status = form.querySelector("[data-form-status]");
+    status.textContent = "Invio in corso…";
     submit.disabled = true;
     submit.textContent = "Invio in corso...";
 
     try {
-      await fetch(
-        "https://trucking-legacy.preview.emergentagent.com/api/contact",
+      const response = await fetch(
+        "https://formsubmit.co/ajax/raffaella@fllitavazzisnc.191.it",
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          signal: AbortSignal.timeout(20000),
           body: JSON.stringify(payload),
         },
       );
+      const result = await response.json();
+      if (!response.ok || ![true, "true"].includes(result.success)) throw new Error("Invio non accettato");
       form.reset();
+      status.textContent = "Richiesta accettata. Grazie per averci contattato.";
       if (toast) {
         toast.textContent =
-          "Messaggio inviato con successo! Ti risponderemo al più presto.";
+          "Richiesta accettata. Grazie per averci contattato.";
         toast.classList.remove("hidden");
         window.setTimeout(() => toast.classList.add("hidden"), 5000);
       }
     } catch {
+      status.textContent = "Invio non riuscito. I dati sono ancora nel modulo: riprova oppure scrivi a raffaella@fllitavazzisnc.191.it.";
       if (toast) {
         toast.textContent =
           "Errore nell'invio del messaggio. Riprova più tardi.";
