@@ -3,7 +3,7 @@ export const navLinks = [
   { href: "#servizi", label: "Servizi" },
   { href: "#flotta", label: "La Nostra Flotta" },
   { href: "#perche-noi", label: "Perché Noi" },
-  { href: "?pagina=dove-siamo", label: "Dove siamo" },
+  { href: "/dove-siamo", label: "Dove siamo" },
   { href: "#contatti", label: "Contatti" },
 ];
 
@@ -31,18 +31,18 @@ export const contactInfo = [
 export const aboutValues = [
   {
     icon: "users",
-    title: "Tradizione Famigliare",
+    title: "Tradizione familiare",
     text: "Tre generazioni unite dalla stessa passione per il trasporto",
   },
   {
     icon: "heart",
     title: "Dedizione Totale",
-    text: "Ogni cliente è trattato come parte della famiglia",
+    text: "Un rapporto diretto e attento alle esigenze di ogni cliente",
   },
   {
     icon: "shield",
     title: "Affidabilità Garantita",
-    text: "Oltre 60 anni di servizio senza compromessi",
+    text: "Oltre 60 anni di servizio con attenzione al cliente",
   },
 ];
 
@@ -55,12 +55,12 @@ export const services = [
   {
     icon: "warehouse",
     title: "Magazzino e Logistica",
-    text: "Offriamo soluzioni di stoccaggio, con magazzini sicuri e organizzati per ottimizzare i vostri flussi di lavoro. Un'area di 14000 mq e 1000 m di capannone coperto.",
+    text: "Offriamo soluzioni di stoccaggio, con magazzini sicuri e organizzati per ottimizzare i vostri flussi di lavoro. Un'area di 14.000 m² e 1.000 m² di capannone coperto.",
   },
   {
     icon: "clock",
-    title: "Puntualità Garantita",
-    text: "Il tempo è denaro. Rispettiamo sempre le tempistiche concordate, perché la vostra pianificazione dipende dalla nostra affidabilità.",
+    title: "Puntualità e affidabilità",
+    text: "Il tempo è denaro. Lavoriamo per rispettare le tempistiche concordate, perché la vostra pianificazione dipende dalla nostra affidabilità.",
   },
   {
     icon: "package",
@@ -74,15 +74,15 @@ export const services = [
   },
   {
     icon: "shield",
-    title: "Sicurezza Totale",
-    text: "Mezzi revisionati, autisti esperti e assicurazione completa. La vostra merce è sempre in buone mani!",
+    title: "Attenzione alla sicurezza",
+    text: "Mezzi revisionati, autisti esperti e copertura assicurativa. Ci prendiamo cura della vostra merce.",
   },
 ];
 
 export const fleetFeatures = [
   "Mezzi moderni e costantemente aggiornati",
   "Manutenzione preventiva programmata",
-  "Revisioni sempre in regola",
+  "Revisioni periodiche",
   "Dotazioni di sicurezza complete",
   //"Sistemi di tracciamento GPS",
   "Copertura assicurativa",
@@ -93,7 +93,7 @@ export const strengths = [
     icon: "award",
     stat: "60+",
     title: "Anni di Esperienza",
-    text: "Sessant'anni di trasporti senza interruzioni, con la stessa passione del primo giorno.",
+    text: "Sessant'anni di trasporti di esperienza, con la stessa passione del primo giorno.",
   },
   {
     icon: "users",
@@ -103,9 +103,9 @@ export const strengths = [
   },
   {
     icon: "clock",
-    stat: "100%",
+    stat: "",
     title: "Puntualità",
-    text: "Il rispetto dei tempi non è un obiettivo, è una promessa che manteniamo sempre.",
+    text: "Pianifichiamo i trasporti con attenzione ai tempi concordati.",
   },
   {
     icon: "phone",
@@ -115,14 +115,14 @@ export const strengths = [
   },
   {
     icon: "shield",
-    stat: "0",
-    title: "Compromessi",
+    stat: "",
+    title: "Cura del servizio",
     text: "La qualità del servizio non è mai stata negoziabile per la nostra famiglia.",
   },
   {
     icon: "heart",
-    stat: "∞",
-    title: "Clienti Soddisfatti",
+    stat: "",
+    title: "Relazioni di fiducia",
     text: "Molti dei nostri clienti sono con noi da decenni. È il nostro orgoglio più grande.",
   },
 ];

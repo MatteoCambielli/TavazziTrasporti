@@ -8,7 +8,7 @@ export const WhyUs = () => `
       ${SectionHeading({
         kicker: "I Nostri Punti di Forza",
         title: "Perché Sceglierci",
-        text: "Dicono di noi: «I Tavazzi si occupano di trasporti e logistica in modo esemplare, con la tenacia e la dedizione che da sempre li contraddistinguono. Lo fanno così bene che, una volta diventato loro cliente, rischi di considerarli parte della tua stessa azienda.",
+        text: "Esperienza, cura della merce e un rapporto diretto: i valori che guidano il nostro lavoro nei trasporti e nella logistica.",
         light: true,
       })}
 

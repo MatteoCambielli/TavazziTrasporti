@@ -14,7 +14,7 @@ export const Footer = () => {
             </h3>
             <p class="text-gray-400 leading-relaxed mb-6 max-w-md">
               Da oltre 60 anni, siamo il partner affidabile per il trasporto merci su strada.
-              Una tradizione famigliare costruita sulla fiducia, la puntualità e il rispetto
+              Una tradizione familiare costruita sulla fiducia, la puntualità e il rispetto
               della parola data.
             </p>
             <div class="flex items-center gap-2 text-[#10B981]">
@@ -34,7 +34,7 @@ export const Footer = () => {
                 .map(
                   ({ href, label }) => `
                     <li>
-                      <a href="${href.startsWith("#") ? "./" + href : href}" class="text-gray-400 hover:text-white transition-colors">
+                      <a href="${href.startsWith("#") ? "/" + href : href}" class="text-gray-400 hover:text-white transition-colors">
                         ${href === "#perche-noi" ? "Perché Sceglierci" : label}
                       </a>
                     </li>
@@ -79,8 +79,11 @@ export const Footer = () => {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div class="flex flex-col md:flex-row items-center justify-between gap-4">
             <p class="text-gray-500 text-sm text-center md:text-left">
-              © ${year} Tavazzi Trasporti - Tavazzi Trasporti S.n.c. - Tutti i diritti riservati
+              © ${year} Tavazzi Trasporti S.n.c.<br />
+              P. IVA 01574970156<br />
+              Piazza Mercato 37 – 26863 Orio Litta (LO), Italia
             </p>
+            <nav aria-label="Informazioni legali" class="footer-legal"><a href="/privacy">Privacy Policy</a><a href="/cookie-policy">Cookie Policy</a></nav>
             <button
               data-scroll-top
               class="flex items-center gap-2 text-gray-400 hover:text-white transition-colors group"

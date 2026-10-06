@@ -43,18 +43,18 @@ export const Fleet = () => `
         </div>
 
         <div class="order-1 lg:order-2 relative">
-          <img
-            src="/pod-backups/trucking-legacy/build/static/media/flotta.3f5b6b22770caf74520f.jpeg"
+          <img loading="lazy" decoding="async" width="702" height="308"
+            src="/images/flotta.webp"
             alt="Flotta Tavazzi Trasporti"
             class="w-full aspect-[4/3] object-cover shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)]"
           />
           <div class="mobile-edge-safe-left absolute -bottom-6 -left-6 bg-[#10B981] text-white p-6 shadow-xl">
-            <div class="font-['Barlow_Condensed'] text-4xl font-bold">100%</div>
-            <div class="uppercase tracking-wider text-sm">Efficienza</div>
+            <div class="font-['Barlow_Condensed'] text-4xl font-bold">Cura</div>
+            <div class="uppercase tracking-wider text-sm">dei mezzi</div>
           </div>
           <div class="mobile-edge-safe-right absolute -top-6 -right-6 bg-[#1B4D3E] text-white p-6 shadow-xl">
-            <div class="font-['Barlow_Condensed'] text-4xl font-bold">0</div>
-            <div class="uppercase tracking-wider text-sm">Guasti in Viaggio</div>
+            <div class="font-['Barlow_Condensed'] text-4xl font-bold">Controlli</div>
+            <div class="uppercase tracking-wider text-sm">periodici</div>
           </div>
         </div>
       </div>

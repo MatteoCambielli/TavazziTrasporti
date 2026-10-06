@@ -7,8 +7,8 @@ export const About = () => `
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div class="relative">
           <div class="aspect-[4/3] overflow-hidden">
-            <img
-              src="/pod-backups/trucking-legacy/build/static/media/storia.2c3a8b5b39826e62c895.jpeg"
+            <img loading="lazy" decoding="async" width="1000" height="620"
+              src="/images/storia.webp"
               alt="Tavazzi Trasporti - La nostra storia"
               class="w-full h-full object-cover"
             />

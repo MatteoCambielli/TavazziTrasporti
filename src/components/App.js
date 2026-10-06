@@ -8,25 +8,29 @@ import { WhyUs } from "./WhyUs.js";
 import { Contact } from "./Contact.js";
 import { Footer } from "./Footer.js";
 
-export const isLocationsPage = new URLSearchParams(window.location.search).get("pagina") === "dove-siamo";
+import { Legal, NotFound } from "./Legal.js";
 
-export const App = () => `
+export const App = (path = "/") => `
   <div class="min-h-screen" data-testid="homepage">
+    <a class="skip-link" href="#main-content">Vai al contenuto</a>
     ${Header()}
-    <main>
-      ${isLocationsPage ? Locations() : `
+    <main id="main-content" tabindex="-1">
+      ${
+        path === "/dove-siamo"
+          ? Locations()
+          : path === "/privacy" || path === "/cookie-policy"
+            ? Legal(path)
+            : path !== "/"
+              ? NotFound()
+              : `
       ${Hero()}
       ${About()}
       ${Services()}
       ${Fleet()}
       ${WhyUs()}
-      ${Contact()}`}
+      ${Contact()}`
+      }
     </main>
     ${Footer()}
-    <div
-      data-toast
-      class="hidden fixed top-4 right-4 z-[100] bg-[#111827] text-white px-6 py-4 shadow-xl max-w-sm"
-      role="status"
-    ></div>
   </div>
 `;

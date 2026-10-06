@@ -58,30 +58,34 @@ export const Contact = () => `
 
         <div class="lg:col-span-3">
           <div class="bg-white p-8 md:p-10 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
-            <form data-contact-form class="space-y-6" data-testid="contact-form">
-              <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="contact-trap" aria-hidden="true" />
+            <noscript><p>Per usare il modulo attiva JavaScript, oppure scrivi a <a href="mailto:raffaella@fllitavazzisnc.191.it">raffaella@fllitavazzisnc.191.it</a>.</p></noscript>
+            <form method="post" action="/api/contact" novalidate data-contact-form class="space-y-6" data-testid="contact-form">
+              <fieldset data-form-fields disabled class="space-y-6">
+              <label class="contact-trap" aria-hidden="true">Lascia vuoto questo campo<input type="text" name="website" tabindex="-1" autocomplete="off" class="contact-trap" aria-hidden="true" /></label>
               <div class="grid md:grid-cols-2 gap-6">
                 <label class="space-y-2 block">
                   <span class="text-gray-700 font-semibold">Nome e Cognome *</span>
                   <input
-                    name="nome"
+                    name="nome" id="nome" aria-describedby="error-nome" autocomplete="name" maxlength="100"
                     type="text"
                     required
                     placeholder="Il tuo nome"
                     class="${fieldClasses} rounded-none border-gray-300 focus:border-[#1B4D3E] focus:ring-[#1B4D3E] bg-gray-50"
                     data-testid="input-nome"
                   />
+                  <span id="error-nome" class="field-error"></span>
                 </label>
                 <label class="space-y-2 block">
                   <span class="text-gray-700 font-semibold">Email *</span>
                   <input
-                    name="email"
+                    name="email" id="email" aria-describedby="error-email" autocomplete="email" maxlength="254"
                     type="email"
                     required
                     placeholder="La tua email"
                     class="${fieldClasses} rounded-none border-gray-300 focus:border-[#1B4D3E] focus:ring-[#1B4D3E] bg-gray-50"
                     data-testid="input-email"
                   />
+                  <span id="error-email" class="field-error"></span>
                 </label>
               </div>
 
@@ -89,17 +93,18 @@ export const Contact = () => `
                 <label class="space-y-2 block">
                   <span class="text-gray-700 font-semibold">Telefono</span>
                   <input
-                    name="telefono"
+                    name="telefono" id="telefono" aria-describedby="error-telefono" autocomplete="tel" maxlength="40"
                     type="tel"
                     placeholder="Il tuo numero"
                     class="${fieldClasses} rounded-none border-gray-300 focus:border-[#1B4D3E] focus:ring-[#1B4D3E] bg-gray-50"
                     data-testid="input-telefono"
                   />
+                  <span id="error-telefono" class="field-error"></span>
                 </label>
                 <label class="space-y-2 block">
                   <span class="text-gray-700 font-semibold">Tipo di Richiesta *</span>
                   <select
-                    name="tipo_richiesta"
+                    name="tipo_richiesta" id="tipo_richiesta" aria-describedby="error-tipo_richiesta" autocomplete="off"
                     required
                     class="${fieldClasses} rounded-none border-gray-300 focus:border-[#1B4D3E] focus:ring-[#1B4D3E] bg-gray-50 text-gray-900"
                     data-testid="select-tipo-richiesta"
@@ -109,19 +114,21 @@ export const Contact = () => `
                     <option value="collaborazione">Collaborazione / Lavoro</option>
                     <option value="informazioni">Informazioni Generali</option>
                   </select>
+                  <span id="error-tipo_richiesta" class="field-error"></span>
                 </label>
               </div>
 
               <label class="space-y-2 block">
                 <span class="text-gray-700 font-semibold">Messaggio *</span>
                 <textarea
-                  name="messaggio"
+                  name="messaggio" id="messaggio" aria-describedby="error-messaggio" autocomplete="off" maxlength="5000"
                   required
                   rows="5"
                   placeholder="Descrivi la tua richiesta..."
                   class="${fieldClasses} min-h-[60px] rounded-none border-gray-300 focus:border-[#1B4D3E] focus:ring-[#1B4D3E] bg-gray-50 resize-none"
                   data-testid="textarea-messaggio"
                 ></textarea>
+                  <span id="error-messaggio" class="field-error"></span>
               </label>
 
               <button
@@ -135,8 +142,9 @@ export const Contact = () => `
 
               <p data-form-status role="status" aria-live="polite" class="text-sm text-gray-700"></p>
               <p class="text-sm text-gray-500 text-center">
-                * Campi obbligatori. I tuoi dati saranno trattati nel rispetto della privacy.
+                * Campi obbligatori. Inviando la richiesta dichiari di aver letto l’<a href="/privacy" class="privacy-link">Informativa Privacy</a>.
               </p>
+              </fieldset>
             </form>
           </div>
         </div>

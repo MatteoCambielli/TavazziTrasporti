@@ -1,0 +1,11 @@
+.git
+node_modules
+.npm-cache
+.DS_Store
+**/.DS_Store
+__MACOSX
+.env*
+outputs
+pod-backups
+tests
+docs
